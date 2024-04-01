@@ -162,6 +162,7 @@ def bita():#создание бит
     #pygame.draw.circle(screen, THECOLORS['red'],[1069,526], 14, 0)
     #pygame.draw.circle(screen, THECOLORS['blue'],[1,524], 14, 0)
     #pygame.draw.circle(screen, THECOLORS['blue'],[1,316], 14, 0)
+
 def ball_move():#движение шайбы
     global xb, yb, randoum,dx, dy, time,gg,otbitie2,otbitie1,iu1,iu2,hx1,hy1,hx2,hy2
     pygame.draw.circle(screen, THECOLORS['black'],[xb,yb], 20, 0)
@@ -1086,13 +1087,13 @@ def one_player():
                     cibemole = cibemole - 1
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_a:
-                    hx1 = -3
+                    hx1 = -1
                 if event.key == pygame.K_d:
-                    hx1 = 3
+                    hx1 = 1
                 if event.key == pygame.K_w:
-                    hy1 = -3
+                    hy1 = -1
                 if event.key == pygame.K_s:
-                    hy1 = 3
+                    hy1 = 1
                 if event.key == pygame.K_v:
                     while do<1:
                         do = do + 1
@@ -1178,12 +1179,10 @@ def one_player():
         import table
         table.show_rec(names)#Выводим на экран новую таблицу
     else:#Если не попали в рекорды
-        #background.fill([255,255,255])
         font = pygame.font.Font(None, 50)
         text = font.render("Не вошли в рекорды",True, THECOLORS ["red"])
-        #screen.blit(background,(0, 0))
         screen.blit(text, [10, 250] )
         pygame.display.flip()
-        pygame.time.delay(0)
+        pygame.time.delay(4000)
     pygame.display.flip()
     screen = pygame.display.set_mode([1071, 672])

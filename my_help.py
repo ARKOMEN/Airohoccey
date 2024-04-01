@@ -6,10 +6,10 @@ def myhelp():
      pygame.display.set_caption("аэрохоккей")
      screen = pygame.display.set_mode([1071, 672])
      background = pygame.Surface(screen.get_size())
-     background.fill([0,0,0])
-     color = THECOLORS["white"]
+     background.fill("gray")
+     color = THECOLORS["blue"]
      top=10; left=20
-     font = pygame.font.Font(None, 20)
+     font = pygame.font.SysFont("Arial", 17,False,False)
      my_file = open('HELP.txt', 'r')#Открываем файл для чтения
      lines = my_file.readlines()# Записываем строки из файла в список lines
      my_file.close()
@@ -32,3 +32,4 @@ def myhelp():
                    if event.button == 3:
                         running = False
      screen = pygame.display.set_mode([1071, 672])
+
